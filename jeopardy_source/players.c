@@ -10,9 +10,16 @@
 #include <string.h>
 #include "players.h"
 
+
+
 // Returns true if the player name matches one of the existing players
 bool player_exists(struct player *players, int num_players, char *name)
 {
+    	for (int count = 0; count < 4; count++){
+		if (strcmp(name, players[count].name) == 0){
+			return true;
+		}
+	}
     return false;
 }
 
